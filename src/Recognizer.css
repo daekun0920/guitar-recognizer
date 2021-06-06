@@ -1,0 +1,38 @@
+.guitar__container {
+    margin: 0 auto;
+    border: 2px solid #BBB;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+
+.guitar__image {
+    width:250px;
+    height:250px;
+}
+
+.dnd__container {
+    width:500px;
+    height:150px;
+    border: 2px dashed #BBB;
+    line-height: 140px;
+    margin:20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.label-container {
+    height:100px;
+    width:500px;
+    text-align:center;
+}
+
+#spinner-border {
+    display: none;
+    margin:0 auto;
+    width: 3rem; height: 3rem;
+}
