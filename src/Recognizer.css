@@ -8,6 +8,7 @@
 .guitar__image {
     width:250px;
     height:250px;
+    align-content: center;
 }
 
 .dnd__container {
