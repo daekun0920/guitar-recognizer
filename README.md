@@ -16,3 +16,12 @@ Bootstrap
 
 TM(Teachable Machine)
 
+## Recognizable Guitars
+
+Stratocaster
+
+Telecaster
+
+Lespaul
+
+More to be added
