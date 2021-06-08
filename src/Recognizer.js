@@ -1,12 +1,16 @@
 import React, { useCallback } from 'react';
 import {useDropzone} from 'react-dropzone';
 import './Recognizer.css'
+import { useGuitar, useGuitarImage } from './GuitarContext';
 
 function Recognizer(props) {
+    const { guitarKind, changeGuitar } = useGuitar()
+    const { imageURL, changeImage } = useGuitarImage()
+
     // the link to your model provided by Teachable Machine export panel
     const URL = 'https://teachablemachine.withgoogle.com/models/MDzFGcKhs/';
 
-    let model, guitar__label, maxPredictions;
+    let model, maxPredictions;
     
     function readURL(input) {
         if (input[0]) {
@@ -14,7 +18,8 @@ function Recognizer(props) {
 
             reader.onload = function (e) {
                 //document.getElementById('guitar-image').src = e.target.result;
-                props.setImageURL(e.target.result);
+                //props.setImageURL(e.target.result);
+                changeImage(e.target.result);
             };
             
             reader.readAsDataURL(input[0]);
@@ -44,13 +49,13 @@ function Recognizer(props) {
             } 
         }    
         //guitar__label.innerHTML = max;
-        props.setGuitarKind(max);
+        //props.setGuitarKind(max);
+        changeGuitar(max);
     }
 
     const onDrop = useCallback(acceptedFiles => {
         document.getElementById('spinner-border').style.display = 'block';
         readURL(acceptedFiles);
-        
         init().then(() => {
             document.getElementById('spinner-border').style.display = 'none';
         });
@@ -62,13 +67,13 @@ function Recognizer(props) {
             <div {...getRootProps()} className="guitar__container">
                 <h1 id="label-container" className="label-container">
                     <div className="guitar__label" id="guitar__label">
-                        {props.guitarKind === 'Default' ? 'Guitar Recognizer' : props.guitarKind}
+                        {guitarKind === 'Default' ? 'Guitar Recognizer' : guitarKind}
                     </div>
                     <div className="spinner-border" role="status" id="spinner-border">
                         <span className="visually-hidden">Loading...</span>
                     </div>
                 </h1>
-                <img id="guitar-image" src={props.imageURL === '' ? 'https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg' : props.imageURL} alt="" className="card-img guitar__image"/>
+                <img id="guitar-image" src={imageURL === '' ? 'https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg' : imageURL} alt="" className="card-img guitar__image"/>
                 <div className="dnd__container">
                 <input {...getInputProps()} />
                 {
