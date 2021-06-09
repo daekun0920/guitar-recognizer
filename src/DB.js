@@ -1,10 +1,4 @@
 const artists = {
-    Default: [
-        {
-            name: "",
-            image: "https://www.irishrsa.ie/wp-content/uploads/2017/03/default-avatar-300x300.png"
-        },
-    ],
     Stratocaster: [
         {
             name: "John Mayer",

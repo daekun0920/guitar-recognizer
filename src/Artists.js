@@ -16,6 +16,7 @@ function Artists(props) {
                 <tbody>
                     <tr>
                         {
+                            guitarKind === 'Default' ? '' : 
                             artists[guitarKind].map((obj, i) => {
                                 return (
                                     <td key={i}>
