@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import {useDropzone} from 'react-dropzone';
 import './Recognizer.css'
 import { useGuitar, useGuitarImage } from './GuitarContext';
@@ -53,13 +53,13 @@ function Recognizer(props) {
         changeGuitar(max);
     }
 
-    const onDrop = useCallback(acceptedFiles => {
+    const onDrop = (acceptedFiles) => {
         document.getElementById('spinner-border').style.display = 'block';
         readURL(acceptedFiles);
         init().then(() => {
             document.getElementById('spinner-border').style.display = 'none';
         });
-    }, [])
+    }
 
     const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
     
