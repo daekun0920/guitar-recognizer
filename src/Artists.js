@@ -2,33 +2,32 @@ import React from 'react'
 import Artist from './Artist';
 import artists from './DB';
 import { useGuitar } from './GuitarContext';
-
+import './Artists.css';
 
 function Artists(props) {
     const { guitarKind } = useGuitar()
 
     return (
-        <div className="container">
-            <h2>
-                {guitarKind === 'Default' ? '' : 'Artists that use ' + guitarKind }
-            </h2>
-            <table>
-                <tbody>
-                    <tr>
-                        {
-                            guitarKind === 'Default' ? '' : 
-                            artists[guitarKind].map((obj, i) => {
-                                return (
-                                    <td key={i}>
-                                        <Artist key={i} name={obj.name} image={obj.image} />
-                                    </td>
-                                );
-                            })
-                        }
-                        
-                    </tr>
-                </tbody>
-            </table>
+        <div>
+            <div className="artists__intro">{guitarKind === 'Default' ? 'Please upload an image' : `Artists that use ${guitarKind}`}</div>
+            <div className="container">
+                <table className="card__container"> 
+                    <tbody>
+                        <tr>
+                            {
+                                guitarKind === 'Default' ? '' : 
+                                artists[guitarKind].map((obj, i) => {
+                                    return (
+                                        <td key={i}>
+                                            <Artist key={i} name={obj.name} image={obj.image} />
+                                        </td>
+                                    );
+                                })
+                            }
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

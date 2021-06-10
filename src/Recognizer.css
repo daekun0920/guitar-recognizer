@@ -1,40 +1,43 @@
 .guitar__container {
-    
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
     border: 2px solid #FFF;
     border-radius: 10px;
-    box-shadow: 2px 2px 3px 7px #CCC;
+    box-shadow: 4px 4px 2px 1px #CCC;
     padding-top: 20px;
-    
+    background-color: #FAFAFA;
 }
 
 .guitar__image {
     width:250px;
     height:250px;
+    justify-content: baseline;
     align-content: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #DDD;
 }
 
 .dnd__container {
     width:500px;
-    height:150px;
+    height:100px;
     border: 2px dashed #BBB;
-    line-height: 140px;
+    line-height: 100px;
     margin:20px;
 }
 
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .label-container {
-    height:100px;
+    height:80px;
     width:500px;
     text-align:center;
+    font-size: 4rem;
+    font-weight: bold;
+    padding-left:48px;
 }
 
 #spinner-border {
@@ -45,4 +48,10 @@
 
 .guitar__lable {
     text-align: center;
+    margin-left: 100px;
+}
+
+.drop__p {
+    font-size: 1.5rem;
+    font-weight: bold;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import Artists from './Artists';
 import Recognizer from './Recognizer';

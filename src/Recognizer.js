@@ -60,6 +60,7 @@ function Recognizer(props) {
             document.getElementById('spinner-border').style.display = 'none';
         });
     }, [])
+
     const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
     
     return (
@@ -70,7 +71,6 @@ function Recognizer(props) {
                         {guitarKind === 'Default' ? 'Guitar Recognizer' : guitarKind}
                     </div>
                     <div className="spinner-border" role="status" id="spinner-border">
-                        <span className="visually-hidden">Loading...</span>
                     </div>
                 </h1>
                 <img id="guitar-image" src={imageURL === '' ? 'https://blackmantkd.com/wp-content/uploads/2017/04/default-image.jpg' : imageURL} alt="" className="card-img guitar__image"/>
@@ -78,8 +78,8 @@ function Recognizer(props) {
                 <input {...getInputProps()} />
                 {
                     isDragActive ?
-                    <p>Drop the file here</p> :
-                    <p>Drag and drip a file here or click to select a file</p>
+                    <p className="drop__p">Drop the file here</p> :
+                    <p className="drop__p">Drag and drip a file here or click to select a file</p>
                 }
                 </div>
             </div>

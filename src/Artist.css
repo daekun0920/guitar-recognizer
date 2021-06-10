@@ -1,9 +1,15 @@
 .card {
-    width: 18rem;
-
+    width: 16rem;
+    padding:10px;
+    margin-left:10px;
+    margin-right:10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 3px 3px 2px 1px #CCC;
 }
 
 .card img {
-    width:18rem;
-    height:250px;
+    margin: 0 auto;
+    width:13rem;
+    height:200px;
 }

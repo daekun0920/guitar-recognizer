@@ -1,0 +1,14 @@
+.card__container {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.artists__intro {
+    margin-top:20px;
+    font-size:2rem;
+    font-weight: bold;
+    background-color:#FAFAFA;
+    box-shadow: 3px 3px 2px 1px #CCC;
+    width: 30%;
+    border-radius: 5px;
+}
