@@ -7,11 +7,13 @@
     box-shadow: 4px 4px 2px 1px #CCC;
     padding-top: 20px;
     background-color: #FAFAFA;
+    width: 45%;
+    height: 450px;
 }
 
 .guitar__image {
-    width:250px;
-    height:250px;
+    width:40%;
+    height:50%;
     justify-content: baseline;
     align-content: center;
     border-radius: 10px;
@@ -19,11 +21,10 @@
 }
 
 .dnd__container {
-    width:500px;
-    height:100px;
-    border: 2px dashed #BBB;
-    line-height: 100px;
-    margin:20px;
+    width:80%;
+    height:150px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .container {
@@ -33,11 +34,11 @@
 
 .label-container {
     height:80px;
-    width:500px;
+    width:100%;
     text-align:center;
-    font-size: 4rem;
+    font-size: 300%;
     font-weight: bold;
-    padding-left:48px;
+    padding-left:10px;
 }
 
 #spinner-border {
@@ -54,4 +55,11 @@
 .drop__p {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+@media ( max-width: 500px ) {
+    .guitar__container {
+        width: 90%;
+        height: 400px;
+    }
 }

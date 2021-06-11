@@ -11,22 +11,27 @@ function Artists(props) {
         <div>
             <div className="artists__intro">{guitarKind === 'Default' ? 'Please upload an image' : `Artists that use ${guitarKind}`}</div>
             <div className="container">
-                <table className="card__container"> 
+                {/* <table className="card__container"> 
                     <tbody>
                         <tr>
                             {
-                                guitarKind === 'Default' ? '' : 
-                                artists[guitarKind].map((obj, i) => {
-                                    return (
-                                        <td key={i}>
-                                            <Artist key={i} name={obj.name} image={obj.image} />
-                                        </td>
-                                    );
-                                })
+                                
                             }
                         </tr>
                     </tbody>
-                </table>
+                </table> */}
+                <ul className="card__container">
+                {
+                    guitarKind === 'Default' ? '' : 
+                    artists[guitarKind].map((obj, i) => {
+                        return (
+                            <li>
+                                <Artist key={i} name={obj.name} image={obj.image} className="artist__obj" />
+                            </li>
+                        );
+                    })
+                }
+                </ul>
             </div>
         </div>
     )

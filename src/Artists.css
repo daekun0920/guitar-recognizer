@@ -9,6 +9,27 @@
     font-weight: bold;
     background-color:#FAFAFA;
     box-shadow: 3px 3px 2px 1px #CCC;
-    width: 30%;
+    width: 45%;
     border-radius: 5px;
 }
+
+@media ( max-width: 900px ) {
+    .artist__obj {
+        display:block;
+    }
+
+    .artists__intro {
+        width: 85%;
+    }
+
+    ul, li {
+        margin-bottom: 20px;
+    }
+}
+
+ul, li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+

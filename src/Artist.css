@@ -13,3 +13,16 @@
     width:13rem;
     height:200px;
 }
+
+@media ( max-width: 900px ) {
+    .card {
+        width: 20rem;
+    }
+
+    .card img {
+        
+        width:16rem;
+        
+    }
+    
+}
