@@ -16,6 +16,7 @@
 @media ( max-width: 900px ) {
     .artist__obj {
         display:block;
+        
     }
 
     .artists__intro {
@@ -24,6 +25,9 @@
 
     ul, li {
         margin-bottom: 20px;
+    }
+    ul {
+        margin-right: 20px;
     }
 }
 
